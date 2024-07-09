@@ -28,10 +28,10 @@
               class="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
             >
               <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">
-                一起在法國旅行
+                {{ title }}
               </DialogTitle>
               <div class="mt-2">
-                <img src="../assets/paris.jpg" />
+                <slot></slot>
               </div>
 
               <div class="mt-4">
@@ -55,7 +55,8 @@
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } from '@headlessui/vue'
 
 defineProps<{
-  isOpen: boolean
+  isOpen: boolean;
+  title: string;
 }>();
 
 const emit = defineEmits<{
