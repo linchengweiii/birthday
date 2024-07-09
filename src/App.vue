@@ -14,6 +14,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import NextDialog from './components/NextDialog.vue'
+import paris from './assets/paris.jpg'
 
 interface ImageContent {
   title: string
@@ -40,7 +41,7 @@ const contents: (ImageContent | TextContent)[] = [
   },
   {
     title: '一起在法國旅行',
-    image: '/cynthia-birthday/src/assets/paris.jpg'
+    image: paris
   },
   {
     title: '一起在法國旅行2',
