@@ -20,6 +20,7 @@ import taipeiSunset from './assets/taipei-sunset.jpg'
 import taitung from './assets/taitung.jpg'
 import newYear from './assets/new-year.jpg'
 import tainan from './assets/tainan.jpg'
+import valentine from './assets/valentine.jpg'
 import diving from './assets/diving.jpg'
 
 interface Content {
@@ -65,6 +66,10 @@ const contents: Content[] = [
   {
     title: '一起去台南玩',
     image: tainan,
+  },
+  {
+    title: '一起過情人節',
+    image: valentine,
   },
   {
     title: '又一起去小琉球潛水',
