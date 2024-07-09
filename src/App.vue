@@ -68,7 +68,8 @@ const images = [
   heart2,
   heart3,
   heart4,
-  heart5
+  heart5,
+  heart6
 ]
 
 const contents: Content[] = [
