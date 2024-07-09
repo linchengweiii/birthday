@@ -20,7 +20,7 @@
     @close-modal="isDoubleConfirm = false"
   />
   <div class="h-screen flex flex-col justify-center bg-blue-100">
-    <img v-if="indexOpeningDialog > contents.length" :src="happyBirthday" />
+    <img v-if="indexOpeningDialog > contents.length && !isDoubleConfirm" :src="happyBirthday" />
   </div>
   <img v-show="false" v-for="(src, index) in images" :key="index" :src="src" alt="preload-image" />
 </template>
@@ -37,6 +37,13 @@ import tainan from './assets/tainan.jpg'
 import valentine from './assets/valentine.jpg'
 import diving from './assets/diving.jpg'
 
+import heart1 from './assets/heart1.jpg'
+import heart2 from './assets/heart2.jpg'
+import heart3 from './assets/heart3.jpg'
+import heart4 from './assets/heart4.jpg'
+import heart5 from './assets/heart5.jpg'
+import heart6 from './assets/heart6.jpg'
+
 import happyBirthday from './assets/happy-birthday.png'
 
 import NextDialog from './components/NextDialog.vue'
@@ -48,7 +55,21 @@ interface Content {
   image?: string
 }
 
-const images = [paris, firstdiving, taipeiSunset, taitung, newYear, tainan, diving] // Preload images
+// Preload images
+const images = [
+  paris,
+  firstdiving,
+  taipeiSunset,
+  taitung,
+  newYear,
+  tainan,
+  diving,
+  heart1,
+  heart2,
+  heart3,
+  heart4,
+  heart5
+]
 
 const contents: Content[] = [
   {
@@ -97,6 +118,33 @@ const contents: Content[] = [
   },
   {
     title: '經過了好多個日日夜夜'
+  },
+  {
+    title: '',
+    image: heart1
+  },
+  {
+    title: '',
+    image: heart2
+  },
+  {
+    title: '',
+    image: heart3
+  },
+  {
+    title: '',
+    image: heart4
+  },
+  {
+    title: '',
+    image: heart5
+  },
+  {
+    title: '',
+    image: heart6
+  },
+  {
+    title: '我們一起經歷了好多事情'
   },
   {
     title: '希望你的 20 歲順順利利、快快樂樂'
